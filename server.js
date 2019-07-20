@@ -16,7 +16,7 @@ app.use(express.static('app/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
-app.use(bodyParser.json({ type: 'applilication/*+json' }));
+app.use(bodyParser.json({ type: 'application/*+json' }));
 
 app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));
 
@@ -28,7 +28,7 @@ app.use('/static', express.static(path.join(__dirname, 'app/public')))
 // ROUTER
 // ================================================================================
 
-require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/apiroutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
 // =============================================================================
